@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Clickjacking Test</title>
-        </head>
-        <body>
-            <p>This page is vulnerable of Clickjacking!</p>
-            <iframe src="https://www.tripadvisor.com/Settings-cp" height="700px" width="700px" frameborder="0"></iframe>
-        </body>
-    </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickjacking Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        iframe {
+            border: 2px solid #d9534f;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .author {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clickjacking Test</h1>
+    <p>This page is vulnerable to Clickjacking!</p>
+    <iframe src="https://www.tripadvisor.com/Settings-cp" height="700px" width="700px" frameborder="0"></iframe>
+    <div class="author">Author: <a href="https://github.com/Zierax" target="_blank">Zierax</a></div>
+</body>
+</html>
